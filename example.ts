@@ -1,6 +1,6 @@
 import makeWASocket, { ConnectionState, DisconnectReason, WAConnectionState, useMultiFileAuthState } from '@whiskeysockets/baileys'
 import { Boom } from '@hapi/boom'
-import { useMongoDbAuthState } from './lib'
+import { useMongoDbAuthState } from '.'
 
 async function connectToWhatsApp() {
     const { state, saveCreds, clearAll } = await useMongoDbAuthState({
