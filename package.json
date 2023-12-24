@@ -1,6 +1,6 @@
 {
   "name": "mongo-authstate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mongodb based for handle baileys auth state",
   "repository": "https://github.com/ghifar1/baileys-mongodb",
   "main": "lib/index.js",
