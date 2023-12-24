@@ -2,7 +2,7 @@
   "name": "mongo-authstate",
   "version": "1.0.0",
   "description": "mongodb based for handle baileys auth state",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

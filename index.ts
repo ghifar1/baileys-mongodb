@@ -14,8 +14,10 @@ const connectToMongoDB = async (mongoUri: string | mongoUriObject, database: str
     if (typeof mongoUri === "string") {
         uri = mongoUri
     } else {
-        uri = `mongodb${mongoUri.isSrv ? "+srv": ""}://${mongoUri.username}:${mongoUri.password}@${mongoUri.host}:${mongoUri.port}/${database}`
+        uri = `mongodb${mongoUri.isSrv ? "+srv": ""}://${mongoUri.username}:${mongoUri.password}@${mongoUri.host}:${mongoUri.port}`
     }
+
+    console.log("uri: ", uri)
 
     if (uri == "" || uri == undefined || uri == null) throw new Error("invalid uri")
 
@@ -29,6 +31,7 @@ const connectToMongoDB = async (mongoUri: string | mongoUriObject, database: str
 
         return collection;
     } catch (error) {
+        throw error;
         console.error("error when connect to mongodb", error);
     }
 }
